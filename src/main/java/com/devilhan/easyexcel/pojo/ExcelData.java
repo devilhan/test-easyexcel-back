@@ -3,7 +3,7 @@ package com.devilhan.easyexcel.pojo;
 import com.alibaba.excel.annotation.ExcelProperty;
 import lombok.Builder;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.Getter;
 
 /**
  * @Author: hanyanjiao
@@ -11,16 +11,14 @@ import lombok.EqualsAndHashCode;
  * @Description:
  */
 @Data
-@Builder
-@EqualsAndHashCode
 public class ExcelData {
 
-    @ExcelProperty("用户ID")
+    @ExcelProperty(value = "用户ID",index = 0)
     private Long uid;
 
-    @ExcelProperty("用户名")
+    @ExcelProperty(value = "用户名",index = 1)
     private String userName;
 
-    @ExcelProperty("手机号")
+    @ExcelProperty(value = "手机号",index = 2)
     private String mobile;
 }
